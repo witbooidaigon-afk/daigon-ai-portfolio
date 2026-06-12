@@ -108,9 +108,29 @@ Voice is one of my strongest and most-practised areas:
 - **What I've built:** outbound and inbound agents that greet, qualify, answer questions from a knowledge base, book appointments, escalate to a human when needed, and log call summaries.
 - **Iteration:** my plumbing voice agent went through many versions (including patched releases) to get conversation flow and booking reliable.
 
-## 10 · Personal Workflow Library
+## 10 · Workflows I Build (to make a business faster)
 
-Over time I've built a personal, reusable library of 40+ workflows, grouped by product: voice agents, speed-to-lead, missed-call recovery, appointment booking, outreach engines, WhatsApp agents, CRM/lifecycle, and back-office assistants — plus vertical "growth engine" templates tuned for specific industries. Because they're templated and documented, I can re-deploy a system to a new context in days rather than rebuilding from scratch.
+The heart of what I do: I build workflows that take slow, manual jobs and make them automatic and fast. I keep a personal, reusable library of 40+ workflows, so I can adapt and re-deploy a system in days rather than starting from scratch.
+
+A sample of what I can build to speed a business up:
+
+- **Lead capture → instant reply** — new leads contacted in seconds, not hours.
+- **Automatic follow-ups** — unanswered leads & quotes chased on their own; nothing slips.
+- **Appointment booking & reminders** — self-serve scheduling that cuts no-shows.
+- **Missed-call recovery** — every missed call gets an instant text back.
+- **Quote & proposal generation** — generated and sent from a form in minutes.
+- **Invoice & payment reminders** — auto-send invoices and chase overdue ones.
+- **Tool-to-tool data sync** — CRM, Sheets & email kept in sync; no double entry.
+- **Inbox triage & email drafting** — mail sorted, labelled, and replies pre-drafted.
+- **Review requests** — happy customers asked for a review right after a job.
+- **Reports & dashboards** — daily/weekly numbers compiled automatically.
+- **Customer onboarding** — welcome, info collection & setup, hands-free.
+- **Internal alerts** — Slack/WhatsApp pings the moment something important happens.
+- **Document generation** — contracts & docs auto-created from your data.
+- **Research & lead enrichment** — prospect data gathered and scored automatically.
+- **Content & social scheduling** — posts queued and published on schedule.
+
+These are grouped into reusable products too — voice agents, speed-to-lead, missed-call recovery, outreach engines, CRM/lifecycle, back-office assistants, and the BntyFul research/indexing pipeline — plus vertical "growth-engine" templates tuned per industry.
 
 ## 11 · Development Process
 

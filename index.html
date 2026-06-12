@@ -147,6 +147,13 @@
   .sys p{font-size:.86rem;margin:0;color:var(--muted)}
   .sys .st{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-deep);display:block;margin-top:7px}
 
+  /* workflows-I-build grid */
+  .wf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:10px;margin-top:18px}
+  .wf{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 15px;position:relative}
+  .wf::before{content:"⚡";position:absolute;top:12px;right:13px;font-size:.8rem;opacity:.5}
+  .wf h4{font-weight:700;font-size:.92rem;color:var(--ink);margin-bottom:3px;line-height:1.25;padding-right:18px}
+  .wf p{font-size:.8rem;margin:0;color:var(--muted);line-height:1.45}
+
   .callout{background:var(--paper-2);border-left:3px solid var(--brand);border-radius:0 12px 12px 0;padding:20px 24px;margin-top:22px}
   .callout .lab{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-deep);margin-bottom:8px}
   .callout p{font-size:.96rem;color:var(--ink-soft)}
@@ -369,8 +376,25 @@
     </section>
 
     <section>
-      <div class="sec-head"><span class="sec-num">10</span><h2>Personal Workflow Library</h2></div>
-      <p>A personal, reusable library of <strong>40+ workflows</strong>, grouped by product: the BntyFul research/indexing pipeline, voice agents, speed-to-lead, missed-call recovery, appointment booking, outreach engines, WhatsApp agents, CRM/lifecycle, and back-office assistants — plus vertical "growth-engine" templates tuned per industry. Because they're templated and documented, I can <span class="accent-word">re-deploy a system in days</span> rather than rebuilding from scratch.</p>
+      <div class="sec-head"><span class="sec-num">10</span><h2>Workflows I Build</h2><span class="sub">made to make a business faster</span></div>
+      <p>The heart of what I do: I build workflows that take slow, manual jobs and make them automatic and fast. I keep a personal library of <strong>40+ reusable workflows</strong>, so I can adapt and <span class="accent-word">re-deploy a system in days</span> rather than starting from scratch. A sample of what I can build to speed a business up:</p>
+      <div class="wf-grid">
+        <div class="wf"><h4>Lead capture → instant reply</h4><p>New leads contacted in seconds, not hours.</p></div>
+        <div class="wf"><h4>Automatic follow-ups</h4><p>Unanswered leads &amp; quotes chased on their own — nothing slips.</p></div>
+        <div class="wf"><h4>Appointment booking &amp; reminders</h4><p>Self-serve scheduling that cuts no-shows.</p></div>
+        <div class="wf"><h4>Missed-call recovery</h4><p>Every missed call gets an instant text back.</p></div>
+        <div class="wf"><h4>Quote &amp; proposal generation</h4><p>Generated and sent from a form in minutes.</p></div>
+        <div class="wf"><h4>Invoice &amp; payment reminders</h4><p>Auto-send invoices and chase overdue ones.</p></div>
+        <div class="wf"><h4>Tool-to-tool data sync</h4><p>CRM, Sheets &amp; email kept in sync — no double entry.</p></div>
+        <div class="wf"><h4>Inbox triage &amp; email drafting</h4><p>Mail sorted, labelled, and replies pre-drafted.</p></div>
+        <div class="wf"><h4>Review requests</h4><p>Happy customers asked for a review right after a job.</p></div>
+        <div class="wf"><h4>Reports &amp; dashboards</h4><p>Daily/weekly numbers compiled automatically.</p></div>
+        <div class="wf"><h4>Customer onboarding</h4><p>Welcome, info collection &amp; setup — hands-free.</p></div>
+        <div class="wf"><h4>Internal alerts</h4><p>Slack/WhatsApp pings the moment something matters.</p></div>
+        <div class="wf"><h4>Document generation</h4><p>Contracts &amp; docs auto-created from your data.</p></div>
+        <div class="wf"><h4>Research &amp; lead enrichment</h4><p>Prospect data gathered and scored automatically.</p></div>
+        <div class="wf"><h4>Content &amp; social scheduling</h4><p>Posts queued and published on schedule.</p></div>
+      </div>
     </section>
 
     <section>
