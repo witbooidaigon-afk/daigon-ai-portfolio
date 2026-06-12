@@ -14,7 +14,7 @@ A single-page, recruiter-facing profile: who I am, how I build, my stack, the sy
 |------|------------|
 | [`index.html`](./index.html) | The visual **AI Engineer Profile** (also served live, link above) |
 | [`AI_Engineer_Profile.md`](./AI_Engineer_Profile.md) | Same profile in plain Markdown |
-| [`portfolio/`](./portfolio) | Client-facing **AI Solutions Portfolio** — business solutions, workflow library, case studies, tech stack |
+| [`portfolio/`](./portfolio) | Client-facing **AI Solutions Portfolio** — business solutions, workflow library, build showcase, tech stack |
 
 ### Portfolio documents
 - [AI Solutions Portfolio (master)](./portfolio/AI_Solutions_Portfolio.md)
@@ -23,7 +23,7 @@ A single-page, recruiter-facing profile: who I am, how I build, my stack, the sy
 - [Technology Stack](./portfolio/Technology_Stack.md)
 - [Business Solutions](./portfolio/Business_Solutions.md)
 - [Workflow Library](./portfolio/Workflow_Library.md)
-- [Case Studies](./portfolio/Case_Studies.md)
+- [Build Showcase — working demos & proof-of-concepts](./portfolio/Build_Showcase.md)
 - [Architecture Index](./portfolio/Architecture_Index.md)
 - [Monthly Costs](./portfolio/Monthly_Costs.md)
 - [Git / Repository Notes](./portfolio/GitHub_Index.md)

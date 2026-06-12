@@ -84,7 +84,7 @@ Reference architectures for Daigon's flagship systems. Diagrams are simplified t
 
 | Asset | Location | Use |
 |---|---|---|
-| Missed-call & no-show flow screenshots (7+ images) | `AI-Workflows/Missed-Call/` | Case Study 3 proof |
+| Missed-call & no-show flow screenshots (7+ images) | `AI-Workflows/Missed-Call/` | Build 3 proof |
 | Slack alert screenshot | `AI-Workflows/Missed-Call/` | Notification proof |
 | Workflow build docs (Markdown) | `Lead-Systems/`, `Assistants/` | Architecture/setup reference |
 | Retell agent config & system-prompt docs | `Assistants/` | Voice-agent design reference |

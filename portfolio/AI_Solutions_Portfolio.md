@@ -16,7 +16,7 @@
 6. Automation Capabilities
 7. Business Solutions & Pricing
 8. Workflow Library
-9. Case Studies
+9. Build Showcase (demos & proof-of-concepts)
 10. Project Portfolio (Ranked)
 11. Architecture Gallery
 12. Monthly Technology Investment
@@ -151,9 +151,11 @@ Each system is a reusable template: inputs, triggers, AI components, integration
 
 ---
 
-# 9 · Case Studies
+# 9 · Build Showcase
 
-*Confidence: ⭐⭐⭐ Strong (files + screenshots/iterations) · ⭐⭐ Solid (files) · ⭐ Demo*
+> **These are working demos & proof-of-concepts I built and tested — not paid client case studies.** I built each one and it works; I didn't necessarily land a paying client from it. "Impact" below describes what each system is *designed to deliver*, validated in testing — not audited client results.
+
+*Proof: ⭐⭐⭐ Strong (files + screenshots/iterations) · ⭐⭐ Solid (files) · ⭐ Early demo*
 
 ### 1. Day-Spa CRM & Lifecycle Automation ⭐⭐⭐ — *Health & wellness*
 Three-workflow CRM (Cal.com lifecycle, Retell voice handler, reminder runner) automating booking, reminders, and post-visit follow-up. **Impact:** fewer no-shows, less admin, more repeat visits. Re-deployable to any appointment-based wellness business.

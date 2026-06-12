@@ -18,7 +18,7 @@ This document is the structural index of the full portfolio. Each section links 
 8. Business Solutions → `Business_Solutions.md`
 9. Workflow Library → `Workflow_Library.md`
 10. Project Portfolio (this file)
-11. Case Studies → `Case_Studies.md`
+11. Build Showcase (demos & proof-of-concepts) → `Build_Showcase.md`
 12. Monthly Technology Investment → `Monthly_Costs.md`
 13. Git Repository Index → `GitHub_Index.md`
 14. Architecture Gallery → `Architecture_Index.md`
@@ -67,7 +67,7 @@ We position not as developers-for-hire, but as **operators who install infrastru
 | `Technology_Stack.md` | Full evidence-based tool inventory |
 | `Business_Solutions.md` | Productized offers + pricing (USD/ZAR) |
 | `Workflow_Library.md` | De-duplicated system catalogue |
-| `Case_Studies.md` | Deployment stories + confidence levels |
+| `Build_Showcase.md` | Working demos & proof-of-concepts (not paid client case studies) + proof levels |
 | `Monthly_Costs.md` | Recurring cost estimates |
 | `GitHub_Index.md` | Repo status + packaging recommendations |
 | `Architecture_Index.md` | Reference architectures + asset inventory |
