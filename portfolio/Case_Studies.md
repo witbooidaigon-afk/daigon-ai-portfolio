@@ -1,6 +1,8 @@
 # Case Studies
 
-Selected deployments illustrating how Daigon turns a business problem into a working AI system. Each study lists a **Confidence Level** reflecting how much hard proof (live workflow files, screenshots, multiple iterations) currently backs it — an honesty signal for both us and the client.
+Selected systems I've **built, tested, and demoed to prospects**, illustrating how I turn a business problem into a working AI system. Some began as real client work; others I built to prove a concept. Each study lists a **Confidence Level** reflecting how much hard proof (working files, screenshots, multiple iterations) currently backs it.
+
+> **Note on outcomes:** these are working builds validated in testing and shown to prospects — the impact described below is what each system is *designed and built* to deliver, not audited production metrics.
 
 > **Confidence:** ⭐⭐⭐ Strong (working files + screenshots/iterations) · ⭐⭐ Solid (working files) · ⭐ Demo/prototype
 

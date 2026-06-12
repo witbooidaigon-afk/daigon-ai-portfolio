@@ -12,9 +12,9 @@
 
 ## 01 · Introduction
 
-I build AI-powered automation systems that do real work for real businesses — answering calls, following up on leads, booking appointments, recovering missed calls, and removing repetitive back-office tasks. I'm self-directed: I learn a tool, build with it under real conditions, iterate until it's reliable, and re-use what works.
+I'm a self-taught AI automation engineer, and I'm at my best when I'm building. Give me a messy, manual business process and I'll turn it into a workflow that just runs — removing the busywork and making things faster. I learn a tool by building something real with it, breaking it, refining it, and keeping what works.
 
-My focus is **applied AI** — connecting today's best models to live business workflows — rather than research or model training. I've built 40+ automation workflows across home services, hospitality, legal, fitness, and pet care, most of them under my own agency, Daigon (Dynamic Media). Some I built for clients; others I built simply to learn, prove a concept, or solve a problem I saw.
+My focus is **applied AI** — connecting today's best models to real workflows, rather than research or model training. So far I've built 40+ automation systems: AI voice agents, lead and missed-call recovery, appointment booking, outreach engines, and an AI research & indexing pipeline — each one **built, tested, and demoed to prospects**. Some started as client work; others I built purely to learn or to prove an idea. I care about systems that are reliable, reusable, and genuinely useful — not clever for its own sake.
 
 ## 02 · Technical Profile
 
@@ -76,7 +76,7 @@ I prefer self-hosting for control, data ownership, and cost — and I lean on ma
 
 ## 07 · AI Systems Built
 
-Real systems I've designed and built (some for clients, some self-initiated to learn or prototype):
+Real systems I've designed, built, and tested — and demoed to prospects. Some began as client work; others I built to learn or prove an idea:
 
 - **BntyFul — Business Indexing & Influencer Intelligence Pipeline** *(self-built; my most advanced system)* — an AI research pipeline that discovers, vets, scores, and **indexes influencers/creators for a given brand**. A "Master Orchestrator" (n8n + a `DAIGON CRM` Google Sheet of executable prompts) dispatches per-category research jobs to a **cloud agent** that drives a **browser via Playwright** to run AI research against embedded reference documents, then returns **scored reports, opportunity lists, and lead-quality analysis** into per-brand master pipelines (with ICP definitions, scoring cards, and ignore lists). I evolved the architecture across **three versions (V1 → V2 → V3)**, landing on a **prompt-centric design** where a single "executable prompt" carries the instructions, references, and routing — with **async webhook callbacks, run-ID tracking, and error logging**. Applied to multiple brand pipelines (e.g. a sports/"Rivals" category and several consumer brands), plus a supporting SA influencer-events intelligence database.
 - **AI Voice Agents** — inbound/outbound phone agents that qualify callers and book jobs (built and iterated for a plumbing use case and a family-law inbound agent).
@@ -89,7 +89,7 @@ Real systems I've designed and built (some for clients, some self-initiated to l
 - **Back-Office Assistants** — email triage, follow-up chasing, proposal/quote generation, review requests.
 - **Customer-Support Agent** — a knowledge-grounded support agent (pet-care prototype).
 
-I'm honest about status: several are deployed and proven, others are tested prototypes or builds I created to learn — and I mark them that way.
+I'm honest about status: these are working builds I've tested and shown to prospects — some ran in real client contexts, others I built to learn or prove an idea. I mark them honestly rather than overclaim.
 
 **What building BntyFul taught me.** This was the project where I grew the most as an engineer. I learned to design **multi-layer systems** (CRM → orchestrator → cloud agent → browser execution → AI processing → results), to keep an orchestrator **thin** and push intelligence into portable, versioned "executable prompts," and to handle **asynchronous execution** properly — immediate acknowledgements, callbacks, timeouts, run tracking, and error workflows instead of brittle one-shot scripts. The biggest realization was that, in this design, **prompt engineering becomes systems engineering**: a single badly-structured prompt can misroute logic or break a run, so I now treat prompts as critical infrastructure with strict templates (`[ROLE] [TASK] [REFERENCES] [EXECUTION RULES] [OUTPUT FORMAT] [FAIL CONDITIONS]`), predictable reference standards, and version history. It also pushed me into **browser automation** (Playwright with abstracted actions) and building a real **research/scoring/indexing data pipeline** with ICPs and ignore lists.
 
