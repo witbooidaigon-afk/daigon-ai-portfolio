@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daigon — AI Engineer Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#081a40;          /* deep navy — dark sections & strong text */
+    --ink-soft:#243456;      /* body text */
+    --paper:#eef3fc;         /* cool light bg */
+    --paper-2:#e3ecf9;
+    --card:#ffffff;
+    --line:#cedbf1;
+    --line-strong:#acc3e9;
+    --muted:#5a6b8c;
+    --muted-2:#8696b6;
+    --brand:#2f7bf0;         /* primary electric blue (on light) */
+    --brand-deep:#1a5ad3;
+    --brand-bright:#5fa3ff;  /* accent on dark */
+    --green:#2fa05f;         /* "growing / success" accent */
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{font-family:"Hanken Grotesk",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px}
+  ::selection{background:var(--brand);color:#fff}
+
+  /* toolbar (screen only) */
+  .toolbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1.2rem;background:rgba(8,26,64,.94);backdrop-filter:blur(8px);color:#eef3fc;font-size:.82rem;border-bottom:1px solid rgba(95,163,255,.45)}
+  .toolbar .tip{font-family:"JetBrains Mono",monospace;letter-spacing:.02em;color:#b9cdf0}
+  .toolbar .tip b{color:var(--brand-bright)}
+  .btn-print{font-family:"JetBrains Mono",monospace;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--brand);color:#fff;border:none;border-radius:999px;padding:.6rem 1.2rem;cursor:pointer;transition:transform .15s,background .15s}
+  .btn-print:hover{background:#fff;color:var(--ink);transform:translateY(-1px)}
+
+  .page{max-width:var(--maxw);margin:0 auto;background:var(--paper)}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;color:#eaf1ff;padding:64px 56px 52px;
+    background:
+      radial-gradient(120% 105% at 82% -12%, rgba(95,163,255,.38), transparent 56%),
+      radial-gradient(90% 80% at 20% 110%, rgba(47,123,240,.30), transparent 60%),
+      linear-gradient(158deg,#0e3a8f 0%, #0b276b 48%, #07173f 100%);
+  }
+  .hero::before{ /* grid */
+    content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(120,175,255,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(120,175,255,.10) 1px,transparent 1px);
+    background-size:34px 34px;
+    mask-image:radial-gradient(120% 90% at 70% 0%, #000 30%, transparent 80%);
+    -webkit-mask-image:radial-gradient(120% 90% at 70% 0%, #000 30%, transparent 80%);
+    pointer-events:none;
+  }
+  .hero::after{ /* starfield */
+    content:"";position:absolute;inset:0;opacity:.85;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='12' cy='18' r='1' opacity='.8'/%3E%3Ccircle cx='40' cy='60' r='.8' opacity='.5'/%3E%3Ccircle cx='70' cy='25' r='1.2' opacity='.9'/%3E%3Ccircle cx='100' cy='80' r='.7' opacity='.4'/%3E%3Ccircle cx='130' cy='40' r='1' opacity='.7'/%3E%3Ccircle cx='160' cy='90' r='.8' opacity='.5'/%3E%3Ccircle cx='190' cy='30' r='1.1' opacity='.85'/%3E%3Ccircle cx='25' cy='110' r='.9' opacity='.6'/%3E%3Ccircle cx='55' cy='150' r='1' opacity='.7'/%3E%3Ccircle cx='85' cy='130' r='.7' opacity='.4'/%3E%3Ccircle cx='115' cy='170' r='1.2' opacity='.85'/%3E%3Ccircle cx='145' cy='140' r='.8' opacity='.5'/%3E%3Ccircle cx='175' cy='180' r='1' opacity='.7'/%3E%3Ccircle cx='200' cy='150' r='.9' opacity='.6'/%3E%3Ccircle cx='18' cy='190' r='1' opacity='.7'/%3E%3Ccircle cx='60' cy='205' r='.7' opacity='.4'/%3E%3Ccircle cx='95' cy='210' r='1' opacity='.6'/%3E%3Ccircle cx='135' cy='205' r='.8' opacity='.5'/%3E%3Ccircle cx='165' cy='215' r='1.1' opacity='.75'/%3E%3Ccircle cx='205' cy='200' r='.8' opacity='.5'/%3E%3Ccircle cx='30' cy='75' r='.6' opacity='.35'/%3E%3Ccircle cx='78' cy='185' r='.6' opacity='.35'/%3E%3Ccircle cx='150' cy='70' r='.6' opacity='.4'/%3E%3Ccircle cx='185' cy='115' r='.7' opacity='.45'/%3E%3Ccircle cx='48' cy='30' r='.7' opacity='.5'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero > *{position:relative;z-index:1}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:.74rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--brand-bright);display:flex;align-items:center;gap:.7rem;margin-bottom:30px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brand-bright);box-shadow:0 0 0 4px rgba(95,163,255,.22)}
+  .hero h1{font-family:"Fraunces",serif;font-optical-sizing:auto;font-weight:600;font-size:clamp(2.6rem,7vw,4.6rem);line-height:.98;letter-spacing:-.02em;margin-bottom:.5rem}
+  .hero h1 em{font-style:italic;color:var(--brand-bright);font-weight:500}
+  .hero .role{font-family:"Fraunces",serif;font-style:italic;font-weight:400;font-size:clamp(1.2rem,3vw,1.7rem);color:#d7e4fb;margin-bottom:26px}
+  .lede{max-width:60ch;color:#c5d6f5;font-size:1.06rem}
+  .hero .lede b{color:#fff;font-weight:600}
+  .contact{margin-top:38px;padding-top:26px;border-top:1px solid rgba(95,163,255,.28);display:flex;flex-wrap:wrap;gap:14px 34px;font-family:"JetBrains Mono",monospace;font-size:.82rem;color:#b9cdf0}
+  .contact span{display:flex;align-items:center;gap:.55rem}
+  .contact b{color:#eaf1ff;font-weight:500}
+  .contact .k{color:var(--brand-bright)}
+  .name-fill{color:#eaf1ff;border-bottom:1px dashed var(--brand-bright);padding-bottom:1px}
+
+  /* stat strip */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--ink);color:#eaf1ff}
+  .stats .s{padding:24px 22px;border-left:1px solid rgba(95,163,255,.20)}
+  .stats .s:first-child{border-left:none}
+  .stats .num{font-family:"Fraunces",serif;font-weight:600;font-size:1.9rem;line-height:1;color:var(--brand-bright)}
+  .stats .lbl{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:#92a6c9;margin-top:9px}
+
+  /* content */
+  main{padding:8px 56px 40px}
+  section{padding:38px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:none}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:22px}
+  .sec-num{font-family:"JetBrains Mono",monospace;font-size:.8rem;font-weight:700;color:var(--brand);border:1px solid var(--line-strong);border-radius:6px;padding:4px 9px;flex:none;background:var(--paper-2)}
+  h2{font-family:"Fraunces",serif;font-weight:600;font-size:1.72rem;letter-spacing:-.01em;line-height:1.1}
+  .sec-head .sub{margin-left:auto;font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2)}
+  p{margin-bottom:1rem;color:var(--ink-soft)}
+  p:last-child{margin-bottom:0}
+  .big-p{font-size:1.12rem}
+  strong{font-weight:600;color:var(--ink)}
+  .accent-word{color:var(--brand-deep);font-weight:600}
+
+  ul.clean{list-style:none}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:.7rem;color:var(--ink-soft)}
+  ul.clean li::before{content:"";position:absolute;left:6px;top:.62em;width:7px;height:7px;background:var(--brand);transform:rotate(45deg)}
+  ul.clean li b{color:var(--ink)}
+
+  .cols2{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{font-family:"JetBrains Mono",monospace;font-size:.78rem;background:var(--card);border:1px solid var(--line-strong);border-radius:999px;padding:7px 14px;color:var(--ink-soft)}
+  .chip.hot{background:var(--ink);color:#eaf1ff;border-color:var(--ink)}
+  .chip.hot b{color:var(--brand-bright)}
+
+  .stack{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .stack .g{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .stack .g h4{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-deep);margin-bottom:9px}
+  .stack .g p{font-size:.92rem;margin:0;color:var(--ink-soft)}
+
+  .loop{counter-reset:step;display:grid;gap:2px}
+  .loop .step{display:grid;grid-template-columns:42px 1fr;gap:16px;align-items:start;padding:13px 0;border-top:1px dotted var(--line-strong)}
+  .loop .step:first-child{border-top:none}
+  .loop .step .n{counter-increment:step;font-family:"Fraunces",serif;font-weight:600;font-size:1.5rem;color:var(--brand);line-height:1}
+  .loop .step .n::before{content:counter(step,decimal-leading-zero)}
+  .loop .step p{margin:0;font-size:.97rem}
+
+  .flow{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:20px;font-family:"JetBrains Mono",monospace;font-size:.78rem;overflow-x:auto}
+  .flow .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .flow .row:last-child{margin-bottom:0}
+  .node{background:var(--card);border:1px solid var(--line-strong);border-radius:8px;padding:8px 12px;color:var(--ink);white-space:nowrap}
+  .node.dark{background:var(--ink);color:#eaf1ff;border-color:var(--ink)}
+  .node.amber{background:var(--brand);color:#fff;border-color:var(--brand);font-weight:700}
+  .arrow{color:var(--brand-deep);font-weight:700}
+  .flow .cap{margin-top:12px;color:var(--muted);font-family:"Hanken Grotesk",sans-serif;font-size:.82rem}
+
+  .feature{position:relative;overflow:hidden;border-radius:16px;color:#eaf1ff;padding:30px 30px 28px;margin-bottom:22px;border:1px solid rgba(95,163,255,.32);
+    background:
+      radial-gradient(120% 130% at 100% 0%, rgba(95,163,255,.34), transparent 55%),
+      linear-gradient(155deg,#103a86,#081d49);
+  }
+  .feature .tag{display:inline-flex;align-items:center;gap:.5rem;font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#06143a;background:var(--brand-bright);padding:5px 11px;border-radius:999px;font-weight:700;margin-bottom:16px}
+  .feature h3{font-family:"Fraunces",serif;font-weight:600;font-size:1.6rem;line-height:1.08;margin-bottom:6px}
+  .feature h3 span{color:var(--brand-bright);display:block;font-size:.92rem;font-style:italic;font-weight:400;margin-top:4px}
+  .feature p{color:#c5d6f5;font-size:.97rem}
+  .feature .flow{background:rgba(255,255,255,.05);border-color:rgba(95,163,255,.25)}
+  .feature .flow .node{background:rgba(255,255,255,.07);color:#eaf1ff;border-color:rgba(95,163,255,.32)}
+  .feature .flow .node.amber{background:var(--brand);color:#fff}
+  .feature .flow .cap{color:#aabfe6}
+  .vbadges{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+  .vbadge{font-family:"JetBrains Mono",monospace;font-size:.7rem;border:1px solid rgba(95,163,255,.4);border-radius:6px;padding:4px 9px;color:#d7e4fb}
+
+  .sys-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .sys{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:15px 17px}
+  .sys h4{font-family:"Hanken Grotesk";font-weight:700;font-size:1rem;margin-bottom:4px;color:var(--ink)}
+  .sys p{font-size:.86rem;margin:0;color:var(--muted)}
+  .sys .st{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-deep);display:block;margin-top:7px}
+
+  .callout{background:var(--paper-2);border-left:3px solid var(--brand);border-radius:0 12px 12px 0;padding:20px 24px;margin-top:22px}
+  .callout .lab{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-deep);margin-bottom:8px}
+  .callout p{font-size:.96rem;color:var(--ink-soft)}
+  .callout .punch{font-family:"Fraunces",serif;font-style:italic;font-weight:500;color:var(--ink)}
+
+  .costs{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .costs .r{display:grid;grid-template-columns:1fr auto;gap:16px;padding:11px 18px;border-top:1px solid var(--line);align-items:center}
+  .costs .r:first-child{border-top:none}
+  .costs .r:nth-child(odd){background:var(--card)}
+  .costs .r .name{font-size:.93rem;color:var(--ink-soft)}
+  .costs .r .val{font-family:"JetBrains Mono",monospace;font-size:.84rem;color:var(--ink);font-weight:500;white-space:nowrap}
+  .costs .total{background:var(--ink);color:#eaf1ff}
+  .costs .total .name{color:#eaf1ff;font-weight:600}
+  .costs .total .val{color:var(--brand-bright);font-weight:700}
+  .note{font-size:.82rem;color:var(--muted-2);font-style:italic;margin-top:10px}
+
+  .future{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .future .f{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-top:1px dotted var(--line-strong)}
+  .future .f .a{color:var(--brand);font-family:"JetBrains Mono",monospace;font-weight:700;font-size:.8rem;margin-top:2px}
+  .future .f p{margin:0;font-size:.9rem}
+
+  footer{background:var(--ink);color:#b9cdf0;padding:30px 56px;font-family:"JetBrains Mono",monospace;font-size:.78rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;border-top:1px solid rgba(95,163,255,.25)}
+  footer b{color:var(--brand-bright)}
+  footer .brandline{letter-spacing:.04em}
+
+  @media screen{
+    section,.stats,.feature{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+    section{animation-delay:.04s}
+    @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  }
+
+  @media (max-width:680px){
+    .hero{padding:46px 26px 38px}
+    main{padding:4px 26px 30px}
+    footer{padding:24px 26px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .cols2,.stack,.sys-grid,.future{grid-template-columns:1fr}
+    .toolbar .tip{display:none}
+  }
+
+  @page{size:A4;margin:14mm}
+  @media print{
+    .toolbar{display:none}
+    body{background:#fff;font-size:10.5pt}
+    .page{max-width:100%}
+    *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+    section,.feature,.sys,.stack .g,.callout,.flow,.costs,.loop .step{break-inside:avoid}
+    .hero{padding:32px 30px}
+    main{padding:0 30px}
+    section{padding:20px 0}
+    .stats{grid-template-columns:repeat(4,1fr)}
+    h2{font-size:1.4rem}
+    .hero h1{font-size:3rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span class="tip">Tip — press <b>Ctrl/Cmd&nbsp;+&nbsp;P</b> → <b>Save as PDF</b> for a perfect export</span>
+  <button class="btn-print" onclick="window.print()">⤓ Export PDF</button>
+</div>
+
+<div class="page">
+
+  <header class="hero">
+    <div class="eyebrow"><span class="dot"></span>AI Engineer Profile · Daigon · Dynamic Media</div>
+    <h1>Building <em>applied&nbsp;AI</em><br>that does real work.</h1>
+    <div class="role">AI Automation, Voice-Agent &amp; AI-Pipeline Engineer</div>
+    <p class="lede">I design, build, deploy, and maintain AI systems that answer calls, follow up on leads in seconds, recover missed business, and run research &amp; indexing pipelines — <b>40+ production workflows</b> on a self-hosted stack. Honest about what I've shipped, and where I'm still growing.</p>
+    <div class="contact">
+      <span><span class="k">name</span> <b class="name-fill">Daigon</b></span>
+      <span><span class="k">role</span> <b>AI Automation Engineer</b></span>
+      <span><span class="k">based</span> <b>South Africa</b></span>
+      <span><span class="k">email</span> <b>dynamicmediaagency2025@gmail.com</b></span>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="s"><div class="num">40+</div><div class="lbl">Production workflows</div></div>
+    <div class="s"><div class="num">V1→V3</div><div class="lbl">Architecture iterations</div></div>
+    <div class="s"><div class="num">3</div><div class="lbl">Disciplines: automation · voice · pipelines</div></div>
+    <div class="s"><div class="num">Self-host</div><div class="lbl">n8n on dedicated VPS</div></div>
+  </div>
+
+  <main>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">01</span><h2>Introduction</h2><span class="sub">Who I am</span></div>
+      <p class="big-p">I build AI-powered automation systems that do real work for real businesses — answering calls, following up on leads, booking appointments, recovering missed calls, indexing and scoring research data, and removing repetitive back-office tasks. I'm self-directed: I learn a tool, build with it under real conditions, iterate until it's reliable, and re-use what works.</p>
+      <p>My focus is <span class="accent-word">applied AI</span> — connecting today's best models to live business workflows — rather than research or model training. I've built 40+ automation workflows across home services, hospitality, legal, fitness, pet care, and influencer-marketing intelligence, most under my own agency, <strong>Daigon (Dynamic Media)</strong>. Some I built for clients; others I built simply to learn, prove a concept, or solve a problem I saw.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">02</span><h2>Technical Profile</h2></div>
+      <ul class="clean cols2">
+        <li><b>Primary discipline:</b> Workflow automation engineering with n8n, plus AI-agent, voice-agent, and AI-research-pipeline development.</li>
+        <li><b>AI fluency:</b> Orchestrating multiple LLM providers (OpenAI, Anthropic) and matching the right model to each task.</li>
+        <li><b>Integration depth:</b> Telephony, messaging, calendars, spreadsheets, CRMs, browser automation, and webhooks into one coherent system.</li>
+        <li><b>Delivery style:</b> Iterative — I version aggressively (v1→v7, full rewrites V1→V3) and harden for reliability.</li>
+        <li><b>Self-hosting:</b> I run my own n8n instance on a VPS rather than relying on managed automation SaaS.</li>
+        <li><b>AI-assisted development:</b> I build fast using Claude Code and Cursor daily.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">03</span><h2>Core Competencies</h2></div>
+      <p style="margin-bottom:16px">My strongest skill is <span class="accent-word">workflow automation</span> — designing and building workflows that make a business run faster: removing manual steps, connecting its tools, and getting work done automatically.</p>
+      <div class="chips">
+        <span class="chip hot"><b>Workflow automation</b> — making the business run faster</span>
+        <span class="chip">n8n workflow engineering</span>
+        <span class="chip">AI agent design — chat · voice · messaging</span>
+        <span class="chip hot">Multi-layer <b>orchestrated</b> AI systems</span>
+        <span class="chip">Voice AI (inbound &amp; outbound)</span>
+        <span class="chip">Browser automation — Playwright</span>
+        <span class="chip">Multi-channel messaging</span>
+        <span class="chip">Lead &amp; lifecycle automation</span>
+        <span class="chip hot">Research · scoring · <b>indexing</b> pipelines</span>
+        <span class="chip">Systems integration (APIs · webhooks)</span>
+        <span class="chip">Prompt engineering &amp; guardrails</span>
+        <span class="chip">Knowledge-grounded agents</span>
+        <span class="chip">Rapid prototyping w/ AI tools</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">04</span><h2>AI Engineering Stack</h2></div>
+      <div class="stack">
+        <div class="g"><h4>LLMs</h4><p>OpenAI GPT-4o / 4o-mini / 4.1 / 5 · Anthropic Claude Sonnet 4</p></div>
+        <div class="g"><h4>Speech</h4><p>Whisper (speech-to-text) · ElevenLabs (text-to-speech)</p></div>
+        <div class="g"><h4>Voice agents</h4><p>Retell AI (custom-LLM) · Vapi</p></div>
+        <div class="g"><h4>Execution</h4><p>Cloud agents + Playwright browser automation for AI-driven research</p></div>
+      </div>
+      <p style="margin-top:18px">I treat models as interchangeable components and design so I can <span class="accent-word">swap them</span> as better/cheaper options appear — small models for classification/drafting, frontier models for reasoning.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">05</span><h2>Workflow Engineering Methodology</h2><span class="sub">research → build → break → refine → template</span></div>
+      <div class="loop">
+        <div class="step"><div class="n"></div><p><b>Map the business process</b> — what happens today, manually, and where it breaks.</p></div>
+        <div class="step"><div class="n"></div><p><b>Define triggers, inputs, and outputs</b> before touching nodes.</p></div>
+        <div class="step"><div class="n"></div><p><b>Build the happy path first</b>, then add branching for edge cases.</p></div>
+        <div class="step"><div class="n"></div><p><b>Iterate in versions</b> — numbered builds &amp; full architecture rewrites so I can compare and roll back.</p></div>
+        <div class="step"><div class="n"></div><p><b>Harden for reliability</b> — retries, error handling, rate limiting, timeouts, callbacks, safe-send guards.</p></div>
+        <div class="step"><div class="n"></div><p><b>Document the build</b> so it can be re-deployed to a new client or context quickly.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">06</span><h2>Automation Architecture</h2></div>
+      <p>I standardise on <strong>n8n, self-hosted on a Hostinger VPS</strong>, as my orchestration core.</p>
+      <div class="flow">
+        <div class="row"><span class="node amber">Trigger</span><span class="arrow">→</span><span class="node dark">n8n — logic · branching · retries</span><span class="arrow">→</span><span class="node">AI layer</span><span class="arrow">→</span><span class="node">Channels</span><span class="arrow">→</span><span class="node">Data + Calendar</span></div>
+        <div class="cap">Call / missed call / form / new row / WhatsApp / webhook / schedule &nbsp;→&nbsp; LLM · voice · transcription &nbsp;→&nbsp; SMS · WhatsApp · email · Slack &nbsp;→&nbsp; Sheets · Airtable · Notion · Postgres · Cal.com</div>
+      </div>
+      <p style="margin-top:14px">For heavier AI-research systems I use a <span class="accent-word">multi-layer design</span> that keeps the orchestrator thin and pushes intelligence into portable prompts (see BntyFul, below).</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">07</span><h2>AI Systems Built</h2><span class="sub">shipped · prototype · built-to-learn</span></div>
+
+      <div class="feature">
+        <span class="tag">★ Flagship — self-built</span>
+        <h3>BntyFul — Business Indexing &amp; Influencer Intelligence Pipeline<span>My most advanced system — the project I grew most on</span></h3>
+        <p>An AI research pipeline that discovers, vets, scores, and <strong style="color:#fff">indexes influencers/creators for a given brand</strong>. A <strong style="color:#fff">Master Orchestrator</strong> (n8n + a <code>DAIGON&nbsp;CRM</code> Google Sheet of executable prompts) dispatches per-category research jobs to a cloud agent that drives a browser via Playwright, runs AI research against embedded reference docs, and returns scored reports, opportunity lists &amp; lead-quality analysis into per-brand master pipelines — with ICPs, scoring cards, and ignore lists.</p>
+        <div class="flow">
+          <div class="row">
+            <span class="node">CRM / prompts</span><span class="arrow">→</span>
+            <span class="node dark">n8n orchestrator</span><span class="arrow">→</span>
+            <span class="node">cloud agent</span><span class="arrow">→</span>
+            <span class="node">Playwright</span><span class="arrow">→</span>
+            <span class="node amber">scored output</span>
+          </div>
+          <div class="cap">Async: immediate ack → dispatch → callback (≤60 min) → run-ID tracking → error logging</div>
+        </div>
+        <div class="vbadges">
+          <span class="vbadge">V1 → V2 → V3</span>
+          <span class="vbadge">prompt-centric design</span>
+          <span class="vbadge">executable prompts</span>
+          <span class="vbadge">webhook callbacks</span>
+          <span class="vbadge">multi-brand pipelines</span>
+        </div>
+      </div>
+
+      <div class="sys-grid">
+        <div class="sys"><h4>AI Voice Agents</h4><p>Inbound/outbound phone agents that qualify callers and book jobs (plumbing + family-law builds).<span class="st">deployed · iterated</span></p></div>
+        <div class="sys"><h4>Missed-Call Text-Back &amp; No-Show Recovery</h4><p>Instant SMS text-back + automated recovery sequences.<span class="st">deployed · screenshots</span></p></div>
+        <div class="sys"><h4>Speed-to-Lead</h4><p>Sub-minute first response to new leads across SMS / WhatsApp / email.<span class="st">deployed</span></p></div>
+        <div class="sys"><h4>Appointment Booking</h4><p>Cal.com booking, rescheduling, cancellation, and reminders.<span class="st">deployed</span></p></div>
+        <div class="sys"><h4>Cold Outreach Engines</h4><p>Personalised, rate-limited outreach with reply detection (HVAC + agency, many versions).<span class="st">deployed</span></p></div>
+        <div class="sys"><h4>WhatsApp AI Agents</h4><p>Knowledge-grounded conversational agents.<span class="st">deployed</span></p></div>
+        <div class="sys"><h4>Spa CRM &amp; Lifecycle</h4><p>Three-workflow customer-lifecycle system (book → remind → follow-up).<span class="st">deployed</span></p></div>
+        <div class="sys"><h4>Back-Office Assistants</h4><p>Email triage, follow-up chasing, proposal/quote generation, review requests.<span class="st">deployed</span></p></div>
+      </div>
+
+      <div class="callout">
+        <div class="lab">What building BntyFul taught me</div>
+        <p>I learned to design <strong>multi-layer systems</strong> (CRM → orchestrator → cloud agent → browser execution → AI processing → results), keep an orchestrator thin, and handle <strong>asynchronous execution</strong> properly — acks, callbacks, timeouts, run tracking, and error workflows instead of brittle one-shot scripts. The biggest realization: <span class="punch">in this design, prompt engineering becomes systems engineering.</span> A single badly-structured prompt can misroute logic or break a run — so I now treat prompts as critical infrastructure with strict templates (<code>[ROLE] [TASK] [REFERENCES] [EXECUTION&nbsp;RULES] [OUTPUT&nbsp;FORMAT] [FAIL&nbsp;CONDITIONS]</code>), predictable reference standards, and version history.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">08</span><h2>Knowledge Systems &amp; RAG</h2></div>
+      <p>I build knowledge-grounded agents so responses are accurate to a specific business — services, pricing, FAQs, policies — rather than generic. Today I achieve this through structured system prompts, embedded reference documents, and curated sources (Notion, Sheets, Google Docs) fed into context. In the BntyFul pipeline, each executable prompt carries its own reference set, and the agent reasons over those documents at run time.</p>
+      <div class="callout" style="border-left-color:var(--green)">
+        <div class="lab" style="color:var(--green)">Where I'm growing — stated honestly</div>
+        <p>Moving toward <strong>formal retrieval-augmented generation</strong> (vector search over larger document sets) for businesses with bigger knowledge bases. A deliberate next step in my skill development — not something I overstate today.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">09</span><h2>Voice AI Experience</h2><span class="sub">one of my strongest areas</span></div>
+      <ul class="clean">
+        <li><b>Platforms:</b> Retell AI (including custom-LLM configuration) and Vapi.</li>
+        <li><b>Components:</b> Whisper for transcription, ElevenLabs for natural voice, GPT-4o for reasoning, Cal.com for booking.</li>
+        <li><b>What I've built:</b> agents that greet, qualify, answer from a knowledge base, book appointments, escalate to a human, and log call summaries.</li>
+        <li><b>Iteration:</b> my plumbing voice agent went through many versions (incl. patched releases) to get conversation flow and booking reliable.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">10</span><h2>Personal Workflow Library</h2></div>
+      <p>A personal, reusable library of <strong>40+ workflows</strong>, grouped by product: the BntyFul research/indexing pipeline, voice agents, speed-to-lead, missed-call recovery, appointment booking, outreach engines, WhatsApp agents, CRM/lifecycle, and back-office assistants — plus vertical "growth-engine" templates tuned per industry. Because they're templated and documented, I can <span class="accent-word">re-deploy a system in days</span> rather than rebuilding from scratch.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">11</span><h2>Development Process</h2></div>
+      <ul class="clean cols2">
+        <li><b>AI-first building:</b> Claude Code and Cursor daily to design, build, and debug faster.</li>
+        <li><b>Iterative &amp; test-driven in spirit:</b> build small, test against real inputs, refine, version.</li>
+        <li><b>Reuse over reinvention:</b> I start from my own templates and proven patterns.</li>
+        <li><b>Docs alongside builds:</b> architecture docs &amp; session summaries keep systems maintainable.</li>
+        <li><b>Pragmatic:</b> I optimise for reliability and business outcome, not cleverness.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">12</span><h2>Tooling &amp; Infrastructure</h2></div>
+      <div class="chips">
+        <span class="chip hot"><b>n8n</b> — self-hosted (Hostinger VPS)</span>
+        <span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">VS Code</span>
+        <span class="chip">Playwright</span>
+        <span class="chip">Git / GitHub</span><span class="chip">Figma</span>
+        <span class="chip">Google Workspace</span><span class="chip">Airtable</span><span class="chip">Notion</span>
+        <span class="chip">Slack</span><span class="chip">Telegram</span>
+        <span class="chip">Retell · Vapi · Twilio · ElevenLabs</span>
+        <span class="chip">WhatsApp Business API</span><span class="chip">Cal.com</span>
+        <span class="chip">Python</span><span class="chip">JavaScript</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">13</span><h2>Learning &amp; Research Process</h2></div>
+      <ul class="clean">
+        <li>I work through build guides &amp; references (n8n chatbot guides, Notion+AI, Retell configs, outreach playbooks) and implement them hands-on.</li>
+        <li>I use AI assistants (Claude, ChatGPT) as research and pair-building partners.</li>
+        <li>I iterate in public-of-one: build → see it fail → research the gap → rebuild. <b>BntyFul went from a heavy multi-field design to a clean prompt-centric architecture this way.</b></li>
+        <li>I write my own architecture and session-summary docs to lock in what I learned, so each project compounds into the next.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">14</span><h2>Current AI Stack Costs</h2><span class="sub">my own tooling · estimates</span></div>
+      <div class="costs">
+        <div class="r"><span class="name">VPS — n8n hosting</span><span class="val">~ $15–$40 / mo</span></div>
+        <div class="r"><span class="name">OpenAI API <i>(usage-based)</i></span><span class="val">~ $20–$150 / mo</span></div>
+        <div class="r"><span class="name">Anthropic Claude / Claude Code</span><span class="val">~ $20–$200 / mo</span></div>
+        <div class="r"><span class="name">Retell AI / Vapi (voice)</span><span class="val">~ $30–$200 / mo</span></div>
+        <div class="r"><span class="name">Twilio (SMS / voice)</span><span class="val">~ $20–$150 / mo</span></div>
+        <div class="r"><span class="name">ElevenLabs</span><span class="val">~ $5–$99 / mo</span></div>
+        <div class="r"><span class="name">Cal.com · Workspace · Airtable · Notion</span><span class="val">~ $10–$70 / mo</span></div>
+        <div class="r"><span class="name">Cursor · Figma · GitHub</span><span class="val">~ $0–$55 / mo</span></div>
+        <div class="r total"><span class="name">Typical personal baseline (fixed tooling)</span><span class="val">~ $90–$250 / mo</span></div>
+      </div>
+      <p class="note">Estimates only — usage-based items scale with how much I'm building/running. Not client pricing. I keep the fixed base low by self-hosting n8n.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">15</span><h2>Future Direction</h2><span class="sub">where I'm heading</span></div>
+      <div class="future">
+        <div class="f"><span class="a">→</span><p><b>Formal RAG &amp; knowledge bases</b> — vector search over larger document sets.</p></div>
+        <div class="f"><span class="a">→</span><p><b>Multi-agent systems / swarms</b> — executable prompts as specialised, coordinated roles.</p></div>
+        <div class="f"><span class="a">→</span><p><b>Analytics dashboards</b> — live reporting on leads recovered, response times, research quality.</p></div>
+        <div class="f"><span class="a">→</span><p><b>Document processing &amp; OCR</b> — automated invoice / quote / intake extraction.</p></div>
+        <div class="f"><span class="a">→</span><p><b>Deeper engineering fundamentals</b> — stronger testing, version control, proper repos.</p></div>
+        <div class="f"><span class="a">→</span><p><b>Productizing &amp; white-labelling</b> — my best systems (BntyFul included) as deployable templates.</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="brandline"><b>Daigon</b> — AI Automation · Machine Learning · Systems Engineering &amp; Workflows</span>
+    <span><b>Honest snapshot</b> — shipped, prototype &amp; learning marked throughout</span>
+  </footer>
+
+</div>
+</body>
+</html>
