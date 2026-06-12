@@ -14,6 +14,7 @@ A single-page, recruiter-facing profile: who I am, how I build, my stack, the sy
 |------|------------|
 | [`index.html`](./index.html) | The visual **AI Engineer Profile** (also served live, link above) |
 | [`AI_Engineer_Profile.md`](./AI_Engineer_Profile.md) | Same profile in plain Markdown |
+| [`Workflows_I_Build.md`](./Workflows_I_Build.md) | **Workflows I build** — the automations I can build to make a business faster |
 | [`portfolio/`](./portfolio) | Client-facing **AI Solutions Portfolio** — business solutions, workflow library, build showcase, tech stack |
 
 ### Portfolio documents
@@ -31,6 +32,8 @@ A single-page, recruiter-facing profile: who I am, how I build, my stack, the sy
 ## ⚙️ Core strength
 
 **Workflow automation** — building workflows (on a self-hosted n8n platform) that remove manual steps, connect a business's tools, and get work done automatically. Plus AI voice agents, multi-channel messaging, and AI research/indexing pipelines.
+
+👉 See [**Workflows I Build**](./Workflows_I_Build.md) for the full list of automations I can deliver and the time each one saves.
 
 ---
 
